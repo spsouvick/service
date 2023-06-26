@@ -1,0 +1,29 @@
+<h1>Select Any Product</h1>
+
+<div class="row">
+  <ng-container *ngFor="let p of product">
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="card" style="width:10rem;">
+         <img src="{{p.Image}}" alt="...">
+        <div class="card-body">
+          <h1 class="card-title">{{p.prod_name}}</h1>
+          <a routerLink="sub-category/{{p.prod_id}}">
+             <button>View More</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    </ng-container>
+</div>
+
+<!-- <div class="all-prod-container" *ngFor="let p of product">
+  <div class="product">
+    <h1 class="prod_name">{{p.prod_name}}</h1>
+    <a routerLink="sub-category/{{p.prod_id}}">
+      <button>view more</button>
+    </a>
+  </div>
+</div> -->
+
+
+

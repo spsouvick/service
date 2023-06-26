@@ -1,0 +1,14 @@
+<p>sub-product works!</p>
+<div class="sub-container">
+    <div *ngFor="let obj of sub_product">
+        <h1><u>product: {{obj.prod_name}}</u></h1>
+
+
+        <div *ngFor="let data of obj.sub_prod">
+            <h1>{{data.company}}</h1>
+            <a routerLink="details/{{data.sub_id}}">
+                <button class="details">Details</button>
+            </a>
+        </div>
+    </div>
+</div>
